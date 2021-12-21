@@ -46,7 +46,7 @@ class Bootstrap
      */
     public static function ready(){
 
-        if(self::$singleton){
+        if(is_null(self::$singleton)){
             self::$singleton=new Bootstrap();
         }
         return self::$singleton;
